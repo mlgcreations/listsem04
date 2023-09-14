@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Constante
+        final double G = 9.81;
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar la altura al usuario
+        System.out.print("Introduce la altura (h) desde la que cae el objeto (en metros): ");
+        double h = scanner.nextDouble();
+
+        // Calcular el tiempo
+        double t = Math.sqrt(2 * h / G);
+
+        // Mostrar el tiempo
+        System.out.printf("El objeto tardará %.2f segundos en caer.", t);
+    }
+}
