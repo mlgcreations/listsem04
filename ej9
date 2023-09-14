@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Constantes
+        final int HORAS_ORDINARIAS = 40;
+        final double PAGO_HORA_ORDINARIA = 12.0;
+        final double PAGO_HORA_EXTRA = 16.0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar las horas trabajadas al usuario
+        System.out.print("Introduce las horas trabajadas durante la semana: ");
+        int horasTrabajadas = scanner.nextInt();
+
+        // Calcular el salario
+        double salario;
+        if (horasTrabajadas <= HORAS_ORDINARIAS) {
+            salario = horasTrabajadas * PAGO_HORA_ORDINARIA;
+        } else {
+            salario = HORAS_ORDINARIAS * PAGO_HORA_ORDINARIA + (horasTrabajadas - HORAS_ORDINARIAS) * PAGO_HORA_EXTRA;
+        }
+
+        // Mostrar el salario
+        System.out.println("El salario semanal es: " + salario + " soles.");
+    }
+}
