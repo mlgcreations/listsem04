@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Declaración de variables
+        double tarifaPorHora = 12.0;  // Tarifa fija de 12 euros por hora
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar horas trabajadas
+        System.out.print("Introduce las horas trabajadas en la semana: ");
+        double horasTrabajadas = scanner.nextDouble();
+
+        // Cálculo del salario
+        double salario = horasTrabajadas * tarifaPorHora;
+
+        // Mostrar resultado
+        System.out.println("El salario semanal es: " + salario + " euros.");
+    }
+}
