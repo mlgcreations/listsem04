@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        // Declaración de variable y asignación de valor
+        double soles = 100.0;  // Puede asignar cualquier valor a 'soles' para la conversión
+        double eurosPorSol = 0.23;  // Este es un valor ficticio, deberías actualizarlo según el tipo de cambio actual
+
+        // Conversión
+        double euros = soles * eurosPorSol;
+
+        // Mostrar resultado
+        System.out.println(soles + " soles son " + euros + " euros.");
+    }
+}
