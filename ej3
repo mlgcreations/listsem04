@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        // Declaración de variable y asignación de valor
+        double euros = 10.0;  // Puede asignar cualquier valor a 'euros' para la conversión
+        double pesetasPorEuro = 166.386;  // Valor fijo: 1 euro equivale a 166.386 pesetas
+
+        // Conversión
+        double pesetas = euros * pesetasPorEuro;
+
+        // Mostrar resultado
+        System.out.println(euros + " euros son " + pesetas + " pesetas.");
+    }
+}
