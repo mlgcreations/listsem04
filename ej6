@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Constante de conversión
+        final int KB_POR_MB = 1024;
+
+        // Crear un objeto Scanner para recoger la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar al usuario que introduzca el valor en Mb
+        System.out.print("Introduce la cantidad de Mb: ");
+        double mb = scanner.nextDouble();
+
+        // Realizar la conversión
+        double kb = mb * KB_POR_MB;
+
+        // Mostrar el resultado
+        System.out.println(mb + " Mb son " + kb + " Kb.");
+    }
+}
