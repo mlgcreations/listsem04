@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Constantes de ponderación
+        final double PONDERACION_PRIMER_EXAMEN = 0.40;
+        final double PONDERACION_SEGUNDO_EXAMEN = 0.60;
+
+        // Crear un objeto Scanner para recoger la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar la nota del primer examen
+        System.out.print("Introduce la nota del primer examen: ");
+        double notaPrimerExamen = scanner.nextDouble();
+
+        // Solicitar la nota deseada para el trimestre
+        System.out.print("¿Qué nota quieres sacar en el trimestre? ");
+        double notaDeseada = scanner.nextDouble();
+
+        // Calcular la nota necesaria en el segundo examen
+        double notaNecesaria = (notaDeseada - PONDERACION_PRIMER_EXAMEN * notaPrimerExamen) / PONDERACION_SEGUNDO_EXAMEN;
+
+        // Mostrar el resultado
+        System.out.printf("Para tener un %.2f en el trimestre necesitas sacar un %.2f en el segundo examen.", notaDeseada, notaNecesaria);
+    }
+}
