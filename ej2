@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        // Declaración de variables y asignación de valores
+        String nombre = "Juan Perez";
+        String direccion = "Calle Falsa 123";
+        String telefono = "1234567890";
+
+        // Mostrar valores
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Dirección: " + direccion);
+        System.out.println("Teléfono: " + telefono);
+    }
+}
