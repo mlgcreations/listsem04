@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicitar la hora y minutos al usuario
+        System.out.print("Introduce la hora (0-23): ");
+        int hora = scanner.nextInt();
+        System.out.print("Introduce los minutos (0-59): ");
+        int minutos = scanner.nextInt();
+
+        // Calcular los segundos hasta la medianoche
+        int segundosRestantes = (23 - hora) * 3600 + (59 - minutos) * 60 + 60;
+
+        // Mostrar los segundos
+        System.out.println("Faltan " + segundosRestantes + " segundos para llegar a la medianoche.");
+    }
+}
