@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        final String COMBINACION_CORRECTA = "1234"; // Ejemplo de combinación
+        Scanner scanner = new Scanner(System.in);
+        int intentos = 4;
+
+        while (intentos > 0) {
+            System.out.print("Introduce la combinación de 4 cifras: ");
+            String combinacion = scanner.nextLine();
+
+            if (combinacion.equals(COMBINACION_CORRECTA)) {
+                System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
+                return;
+            } else {
+                intentos--;
+                if (intentos > 0) {
+                    System.out.println("Lo siento, esa no es la combinación. Te quedan " + intentos + " intentos.");
+                } else {
+                    System.out.println("Lo siento, esa no es la combinación. No te quedan más intentos.");
+                }
+            }
+        }
+    }
+}
