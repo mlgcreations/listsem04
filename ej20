@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduce un número entero: ");
+        long numero = scanner.nextLong();
+        long n = numero;
+        String digitosPares = "";
+        int suma = 0;
+
+        while (n > 0) {
+            long digito = n % 10;
+            if (digito % 2 == 0) {
+                digitosPares = digito + " " + digitosPares;
+                suma += digito;
+            }
+            n /= 10;
+        }
+
+        System.out.println("Dígitos pares: " + digitosPares);
+        System.out.println("Suma de dígitos pares: " + suma);
+    }
+}
