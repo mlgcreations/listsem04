@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicitar el día de la semana
+        System.out.print("Introduce el día de la semana (lunes a viernes): ");
+        String dia = scanner.nextLine().toLowerCase();
+
+        // Solicitar la hora
+        System.out.print("Introduce la hora (0-23): ");
+        int hora = scanner.nextInt();
+
+        // Solicitar los minutos
+        System.out.print("Introduce los minutos (0-59): ");
+        int minutos = scanner.nextInt();
+
+        int minutosTotales = 0;
+
+        switch (dia) {
+            case "lunes":
+                minutosTotales = 4 * 24 * 60 + (15 * 60); // 4 días más 15 horas del viernes en minutos
+                break;
+            case "martes":
+                minutosTotales = 3 * 24 * 60 + (15 * 60);
+                break;
+            case "miercoles":
+                minutosTotales = 2 * 24 * 60 + (15 * 60);
+                break;
+            case "jueves":
+                minutosTotales = 1 * 24 * 60 + (15 * 60);
+                break;
+            case "viernes":
+                minutosTotales = 15 * 60;
+                break;
+        }
+
+        int minutosTranscurridos = hora * 60 + minutos;
+        int minutosRestantes = minutosTotales - minutosTranscurridos;
+
+        System.out.println("Faltan " + minutosRestantes + " minutos para el fin de semana.");
+    }
+}
