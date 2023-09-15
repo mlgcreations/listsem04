@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int contadorNumeros = 0;
+        int sumaImpares = 0;
+        int contadorImpares = 0;
+        int mayorPar = Integer.MIN_VALUE;
+
+        System.out.println("Introduce números (introduce un número negativo para terminar):");
+
+        while (true) {
+            int numero = scanner.nextInt();
+
+            if (numero < 0) {
+                break;
+            }
+
+            contadorNumeros++;
+
+            if (numero % 2 == 0) {
+                if (numero > mayorPar) {
+                    mayorPar = numero;
+                }
+            } else {
+                sumaImpares += numero;
+                contadorImpares++;
+            }
+        }
+
+        double mediaImpares = contadorImpares > 0 ? (double) sumaImpares / contadorImpares : 0;
+
+        System.out.println("Se han introducido " + contadorNumeros + " números.");
+        System.out.println("La media de los números impares es: " + mediaImpares);
+        System.out.println("El mayor de los números pares es: " + (mayorPar != Integer.MIN_VALUE ? mayorPar : "No se introdujo ningún número par."));
+    }
+}
